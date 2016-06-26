@@ -2,3 +2,37 @@ html,body {
   margin: 0;
   padding: 0;
 }
+
+nav {
+  background-color: #003249;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+}
+
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+footer {
+  background-color: #003249;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+    width: 100%;
+  bottom: 0;
+}

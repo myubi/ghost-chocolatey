@@ -4,6 +4,22 @@
 
 {{#foreach posts}}
 <article>
+  {{#if image}}
+  <div>
+    <img src="{{image}}" />
+  </div>
+  {{/if}}
+  <div>
+  <h5>
+    {{tags separator=" / "}}
+  </h5>
+  <h3><a href="{{url}}">{{title}}</a></h3>
+  <h6>{{date format='dddd, DD, MMMM YYYY'}}</h6>
+    <p>{{excerpt words="100"}}<span>...</span></p>
+  </div>
+  <div>
+    <button><a href="">Continue Reading -></a></button>
+  </div>
 </article>
 {{/foreach}}
 

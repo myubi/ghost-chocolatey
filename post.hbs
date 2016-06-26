@@ -1,0 +1,13 @@
+{{!< default}}
+
+<article>
+  {{#post}}
+  {{#if image}}
+    <img src="{{image}}" />
+  {{/if}}
+  <h3>{{title}}</h3>
+  <div>
+    {{content}}
+  </div>
+  {{/post}}
+</article>
