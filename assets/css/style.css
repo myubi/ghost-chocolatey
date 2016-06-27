@@ -1,38 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Dr+Sugiyama);
+/* HTML AND BODY */
 html,body {
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: #f5f5f5;
+  background-image: url('../images/bg.jpg');
+}
+
+a {
+  text-decoration: none;
+  color: #003249;
+}
+
+/* NAVIGATION */
+
 nav {
-  background-color: #003249;
-  position: fixed;
+  background-color: #0d0b18;
   width: 100%;
-  top: 0;
 }
 
 nav ul {
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
 nav li {
   list-style: none;
   display: inline-block;
+  margin: 0 32px;
+  position: relative;
 }
+
+nav li a {
+  line-height: 42px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header {
+  background-size: auto;
+  font-family: 'Dr Sugiyama', cursive;
+  text-align: center;
+  font-size: 60px;
+  color: #594537;
+  text-shadow: 2px 2px #f1724b;
+  background-color: rgba(32, 154, 159, 0.82);
+  padding: 30px;
+}
+
+header h1 {
+      margin: 0;
+}
+
+article {
+  background-color: #FFFFFF;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.sidebar-block {
+  background-color: #FFFFFF;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+/* CONTAINER, MAIN AND SIDEBAR */
 
 .container {
   width: 95%;
   max-width: 1400px;
   margin: 0 auto;
-  margin-top: 50px;
 }
+
+#main {
+  width: 740px;
+  float: left;
+  margin-right: 40px;
+  margin-bottom: 100px;
+}
+
+#sidebar {
+    width: 300px;
+    float: right;
+}
+
+.sidebar-title {
+    overflow: hidden;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #161616;
+}
+
+.sidebar-title>span {
+    position: relative;
+    display: inline-block;
+}
+
+.sidebar-title>span:before, .sidebar-title>span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-bottom: 1px solid;
+    border-color: #d8d8d8;
+    width: 591px;
+    margin: 0 14px;
+}
+
+.sidebar-title>span:before {
+    right: 100%;
+}
+
+.sidebar-title>span:after {
+    left: 100%;
+}
+
+#tag-list li{
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  background: #d8d8d8;
+  margin-right: 5px;
+}
+
+/* FOOTER */
 
 footer {
   background-color: #003249;
   padding: 20px;
   text-align: center;
-  position: fixed;
-    width: 100%;
+  position: absolute;
+  width: 100%;
   bottom: 0;
+
 }

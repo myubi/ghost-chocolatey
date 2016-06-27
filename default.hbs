@@ -16,21 +16,48 @@
     <nav>
       {{navigation}}
     </nav>
-
+    <header>
+      <h1>Chocolatey</h1>
+    </header>
     <div class="container">
-      <header>
-        <img src="http://placekitten.com/1400/300" />
-      </header>
+      <div id="content">
+        <div id="main">
       {{{body}}}
-
+        </div>
+        <aside id="sidebar">
+          <div class="sidebar-block">
+            <h4 class="sidebar-title"><span>Tag list</span></h4>
+			      <div>
+              <ul id="tag-list"></ul>
+			      </div>
+		      </div>
+        </aside>
+      </div>
     </div>
-    <footer>
-      <section>{{@blog.title}} {{date format="YYYY"}}</section>
-    </footer>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 
     {{ghost_foot}}
+    <script type="text/javascript">
+      function onSuccess(data) {
+        var $result = $('#tag-list');
+        $.each(data.tags, function (i, tag) {
+          $result.append(
+            '<li><a href="/tag/' + tag.slug + '/">' + tag.name + '</a></li>'
+          );
+        });
+      }
+
+      jQuery(document).ready(function () {
+        $.get(
+          ghost.url.api('tags', {
+            limit: 'all',
+            include: 'count.posts',
+            order: 'count.posts DESC'
+          })
+        ).done(onSuccess);
+      });
+    </script>
 
   </body>
 </html>
