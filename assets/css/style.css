@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Dr+Sugiyama);
+
 /* HTML AND BODY */
 html,body {
   margin: 0;
@@ -65,6 +66,7 @@ article {
   background-color: #FFFFFF;
   padding: 30px;
   margin-bottom: 40px;
+  padding-bottom: 80px
 }
 
 .sidebar-block {
@@ -82,14 +84,14 @@ article {
 }
 
 #main {
-  width: 740px;
+  width: 70%;;
   float: left;
   margin-right: 40px;
   margin-bottom: 100px;
 }
 
 #sidebar {
-    width: 300px;
+    width: 25%;
     float: right;
 }
 
@@ -132,6 +134,37 @@ article {
   padding: 10px;
   background: #d8d8d8;
   margin-right: 5px;
+}
+
+/* IMG */
+
+.img-thumbnail {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+}
+
+.img-thumbnail img {
+  width: 400px;
+  height: 300px;
+  margin: 0 0 0 -50px;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  border: medium none;
+  padding: 10px;
+  border: #145a5d 1px solid;
+  background-color: #209a9f;
+}
+
+.excerpt {
+  margin-bottom: 20px;
 }
 
 /* FOOTER */

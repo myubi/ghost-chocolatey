@@ -1,13 +1,21 @@
 {{!< default}}
-
-<article>
+<main>
   {{#post}}
+  <article role="article" itemscope itemtype="http://schema.org/Article">
+  {{#if tags}}
+    <h5>
+      {{tags separator=" / "}}
+    </h5>
+    {{/if}}
+  <h3>{{title}}</h3>
   {{#if image}}
     <img src="{{image}}" />
   {{/if}}
-  <h3>{{title}}</h3>
+
   <div>
     {{content}}
   </div>
-  {{/post}}
+
 </article>
+  {{/post}}
+</main>

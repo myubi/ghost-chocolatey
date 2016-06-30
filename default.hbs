@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {{! Document Settings}}
     <meta charset="utf-8" />
 
+    {{! Page Meta and Responsive }}
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    {{! Favicon and CSS}}
     <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 
     {{ghost_head}}
   </head>
-  <body>
+  <body class="{{body_class}}">
     <nav>
       {{navigation}}
     </nav>
@@ -25,12 +29,34 @@
       {{{body}}}
         </div>
         <aside id="sidebar">
+
+        <div class="sidebar-block">
+            <h4 class="sidebar-title"><span>About</span></h4>
+            <div>
+              Random person text
+            </div>
+          </div>
+
+          <div class="sidebar-block">
+            <h4 class="sidebar-title"><span>Social Networks</span></h4>
+            <div>
+              <ul class="social icons">
+                <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-steam" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
           <div class="sidebar-block">
             <h4 class="sidebar-title"><span>Tag list</span></h4>
 			      <div>
               <ul id="tag-list"></ul>
 			      </div>
 		      </div>
+
         </aside>
       </div>
     </div>
