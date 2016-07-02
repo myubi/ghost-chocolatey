@@ -22,14 +22,16 @@
     <div class="excerpt">{{excerpt words="30"}}<span>...</span></div>
   </div>
   <div>
-    <button><a href="{{url}}">Continue Reading -></a></button>
+    <a href="{{url}}">Continue Reading -></a>
   </div>
 </article>
 {{/foreach}}
 
 <div>
 {{#if pagination}}
+<div>
 {{{pagination}}}
+</div>
 {{/if}}
 </div>
 
