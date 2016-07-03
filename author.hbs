@@ -3,14 +3,19 @@
 {{#author}}
   <article role="article" itemscope itemtype="http://schema.org/Article">
 <section class="author-profile">
+  <div class="author-side">
   {{#if image}}
   <img class="profile-pic" src="{{image}}" />
 {{/if}}
+<p>
+  {{#if location}}<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>{{/if}}
+  {{#if website}}<p><a href="{{website}}">{{website}}</a></p>{{/if}}
+    {{#if twitter}}<p><a href="{{twitter_url}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></p>{{/if}}
+    {{#if facebook}}<a href="{{facebook_url}}"><i class="fa fa-facebook" aria-hidden="true"></i></a>{{/if}}
+</p>
+</div>
   <h1>{{name}}</h1>
   {{#if bio}}<p>{{bio}}</p>{{/if}}
-  {{#if location}}<p>{{location}}</p>{{/if}}
-  {{#if website}}<p>{{website}}</p>{{/if}}
-    {{#if twitter}}<p>{{twitter}}</p>{{/if}}
 </section>
 </article>
 {{/author}}

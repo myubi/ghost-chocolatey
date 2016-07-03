@@ -2,30 +2,7 @@
 
 <main role="main">
 
-{{#foreach posts}}
-<article role="article" itemscope itemtype="http://schema.org/Article">
-
-  {{#if image}}
-  <div class="img-thumbnail">
-    <img src="{{image}}" />
-  </div>
-  {{/if}}
-  <div>
-  {{#if tags}}
-  <h5>
-    {{tags separator=" / "}}
-  </h5>
-  {{/if}}
-  <h1 itemprop="headline"><a href="{{url}}" rel="bookmark">{{title}}</a></h1>
-  <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished"><h6>{{date format='dddd, DD, MMMM YYYY'}}</h6></time>
-
-    <div class="excerpt">{{excerpt words="30"}}<span>...</span></div>
-  </div>
-  <div>
-    <a href="{{url}}">Continue Reading -></a>
-  </div>
-</article>
-{{/foreach}}
+{{> "loop"}}
 
 <div>
 {{#if pagination}}
