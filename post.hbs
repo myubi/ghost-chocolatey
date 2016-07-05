@@ -2,22 +2,32 @@
 <main role="main">
   {{#post}}
   <article role="article" itemscope itemtype="http://schema.org/Article">
+  <div>
+    <h3 class="post-title">{{title}}</h3>
+    {{#if image}}
+      <img src="{{image}}" />
+    {{/if}}
+  </div>
+  <div class="left">
+  <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+    <h6><i class="fa fa-clock-o" aria-hidden="true"></i> {{date format='dddd, DD, MMMM YYYY'}}</h6>
+  </time>
+  </div>
   {{#if tags}}
+  <div class="right">
     <h5>
+      <i class="fa fa-tags" aria-hidden="true"></i>
       {{tags separator=" / "}}
     </h5>
-    {{/if}}
-  <h3>{{title}}</h3>
-  {{#if image}}
-    <img src="{{image}}" />
+  </div>
   {{/if}}
 
   <div>
+    <hr>
     {{content}}
   </div>
-
+<hr>
   <section class="share">
-    <h4>Share this post</h4>
     <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
@@ -31,13 +41,18 @@
         <span class="hidden">Google+</span>
     </a>
 </section>
+<hr>
 
   {{#prev_post}}
+  <div class="left">
     <a href="{{url}}">{{title}}</a>
+  </div>
   {{/prev_post}}
 
   {{#next_post}}
+  <div class="right">
     <a href="{{url}}">{{title}}</a>
+  </div>
   {{/next_post}}
 </article>
   {{/post}}
