@@ -9,17 +9,17 @@
   <div class="preview-content">
     <div>
     {{#if tags}}
-    <h5>
+    <h5 class="tags-top">
       <i class="fa fa-tags" aria-hidden="true"></i>
       {{tags separator=" / "}}
     </h5>
     {{/if}}
-    <h1 itemprop="headline"><a href="{{url}}" rel="bookmark">{{title}}</a></h1>
+    <h1 itemprop="headline" class="preview-title"><a href="{{url}}" rel="bookmark">{{title}}</a></h1>
     <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished"><h6><i class="fa fa-clock-o" aria-hidden="true"></i> {{date format='dddd, DD, MMMM YYYY'}}</h6></time>
     </div>
     <div class="excerpt">
       <p>{{excerpt words="30"}}<span>...</span></p>
-      <p><a href="{{url}}"><span class="read-more">Continue Reading -></span></a></p>
+      <p><a href="{{url}}"><span class="read-more">Read More?</span></a></p>
     </div>
   </div>
 </article>
