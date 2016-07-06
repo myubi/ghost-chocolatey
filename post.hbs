@@ -8,52 +8,47 @@
       <img src="{{image}}" />
     {{/if}}
   </div>
-  <div class="left">
+  <div class="post-info">
+  <div>
   <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-    <h6><i class="fa fa-clock-o" aria-hidden="true"></i> {{date format='dddd, DD, MMMM YYYY'}}</h6>
+    <h4 class="left grey-text"><i class="fa fa-clock-o green-icon" aria-hidden="true"></i> {{date format='dddd, DD, MMMM YYYY'}}</h4>
   </time>
   </div>
   {{#if tags}}
-  <div class="right">
-    <h5>
-      <i class="fa fa-tags" aria-hidden="true"></i>
+  <div class="right post-tags">
+    <h4>
+      <i class="fa fa-tags green-icon" aria-hidden="true"></i>
       {{tags separator=" / "}}
-    </h5>
+    </h4>
   </div>
   {{/if}}
+</div>
 
-  <div>
-    <hr>
+  <div class="content">
     {{content}}
   </div>
-<hr>
+<div class="left">
+  {{#author}}
+  <span>By <a href="{{url}}">{{name}}</a></span>
+  {{/author}}
+</div>
+<div class="right">
   <section class="share">
     <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-        <span class="hidden">Twitter</span>
+          <i class="fa fa-twitter"></i><span class="hidden">Tweet</span>
     </a>
     <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-        <span class="hidden">Facebook</span>
+        <i class="fa fa-facebook"></i><span class="hidden">Share</span>
     </a>
     <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-        <span class="hidden">Google+</span>
+          <i class="fa fa-google-plus"></i><span class="hidden">+1</span>
     </a>
 </section>
-<hr>
+</div>
 
-  {{#prev_post}}
-  <div class="left">
-    <a href="{{url}}">{{title}}</a>
-  </div>
-  {{/prev_post}}
-
-  {{#next_post}}
-  <div class="right">
-    <a href="{{url}}">{{title}}</a>
-  </div>
-  {{/next_post}}
 </article>
   {{/post}}
 </main>
