@@ -1,0 +1,19 @@
+{{!< default}}
+<main role="main">
+  {{#post}}
+  <article role="article" itemscope itemtype="http://schema.org/Article">
+  <div>
+    <h3 class="post-title">{{title}}</h3>
+    {{#if image}}
+      <img src="{{image}}" />
+    {{/if}}
+  </div>
+
+  <div class="content">
+    {{content}}
+  </div>
+
+
+</article>
+  {{/post}}
+</main>

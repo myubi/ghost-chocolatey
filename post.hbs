@@ -24,10 +24,10 @@
   {{/if}}
 </div>
 
-  <div class="content">
+  <section class="content">
     {{content}}
     <hr>
-  </div>
+  </section>
   <div class="author-footer">
 <div class="left">
   {{#author}}
@@ -51,7 +51,15 @@
 </section>
 </div>
 </div>
-
 </article>
+<div class="pagination">
+{{#prev_post}}
+  <a class="newer-posts" href="{{url}}"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Previous Post</a>
+{{/prev_post}}
+
+{{#next_post}}
+  <a class="older-posts" href="{{url}}">Next Post <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+{{/next_post}}
+</div>
   {{/post}}
 </main>

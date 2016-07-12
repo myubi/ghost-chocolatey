@@ -249,7 +249,6 @@ header a:hover{
   max-width: 1400px;
   margin: 0 auto;
   height:auto !important;
-min-height:100%;
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
@@ -354,6 +353,22 @@ border-radius: 10px;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+}
+
+/* BROWSING TAG */
+
+.browsing-tag {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.browsing-tag p {
+  margin: 0;
+  font-style: italic;
+}
+
+.browsing-tag h1 {
+  font-size: 30px;
 }
 
 /* SIDEBAR */
@@ -472,6 +487,10 @@ font-weight: bold;
   display: block;
 }
 
+.author-info {
+  padding-top: 15px;
+}
+
 .author-info span{
   margin-left: 10px;
 }
@@ -526,9 +545,19 @@ margin-right: 14px;
 }
 
 .author-footer {
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   padding-bottom: 10px;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 0px 0px rgb(24, 104, 107);
+  -moz-box-shadow: 5px 5px 0px 0px rgb(24, 104, 107);
+  box-shadow: 5px 5px 0px 0px rgb(24, 104, 107);
 }
 
 /* ERROR PAGE */

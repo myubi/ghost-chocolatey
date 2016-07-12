@@ -1,21 +1,13 @@
 {{!< default}}
-
-{{#tag}}
-<div>
-  <p>Browsing now...</p>
-    <h1 class="page-title">{{name}}</h1>
-    <h2 class="page-description">
-        {{#if description}}
-            {{description}}
-        {{else}}
-            {{../pagination.total}} post(s).
-        {{/if}}
-    </h2>
-</div>
-
-{{/tag}}
-
 <main role="main">
+
+  {{#tag}}
+  <article class="browsing-tag">
+    <p>Browsing</p>
+      <h1 class="page-title">{{name}}</h1>
+  </article>
+
+  {{/tag}}
     <!-- includes the post loop - partials/loop.hbs -->
     {{> "loop"}}
 </main>
